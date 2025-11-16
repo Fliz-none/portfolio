@@ -49,7 +49,7 @@ portfolio/
 ├── script.js           # JavaScript vanilla
 ├── images/             # Hình ảnh (avatar, project screenshots)
 ├── README.md           # File này
-└── .gitignore          # Git ignore file (nếu có)
+└── .gitignore          # Git ignore file 
 ```
 
 ## ✨ Các Dự Án Nổi Bật
