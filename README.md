@@ -141,7 +141,7 @@ Hãy liên lạc với tôi qua:
 - 📧 **Email**: [lhd4388@gmail.com](mailto:lhd4388@gmail.com)
 - 📱 **Phone**: [0942.852.755](tel:0942852755)
 - 💼 **GitHub**: [@Fliz-none](https://github.com/Fliz-none)
-- 🌐 **Portfolio**: [lehaidang.dev](https://lehaidang.dev) (nếu có domain)
+<!-- - 🌐 **Portfolio**: [lehaidang.dev](https://lehaidang.dev) -->
 
 ## 📄 License
 
