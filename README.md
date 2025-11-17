@@ -1,7 +1,6 @@
 # 👨‍💻 Portfolio - Lê Hải Đăng
 
 [![GitHub](https://img.shields.io/badge/GitHub-Fliz--none-181717?style=flat-square&logo=github)](https://github.com/Fliz-none)
-[![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
 
 > Full-Stack Developer chuyên về **Laravel**, **NextJS**, **NodeJS**, **SQL Server** | Xây dựng hệ thống Enterprise, Dashboard hiệu năng cao & Automation Workflow
 
@@ -39,18 +38,6 @@ Portfolio này giới thiệu các dự án, kỹ năng và kinh nghiệm của 
 - **API Testing** - Postman
 - **Database Tools** - SQL Server Management Studio
 - **Deployment** - Docker (cơ bản)
-
-## 📁 Cấu trúc Dự Án
-
-```
-portfolio/
-├── index.html          # HTML chính - trang portfolio
-├── style.css           # Stylesheet (responsive design)
-├── script.js           # JavaScript vanilla
-├── images/             # Hình ảnh (avatar, project screenshots)
-├── README.md           # File này
-└── .gitignore          # Git ignore file 
-```
 
 ## ✨ Các Dự Án Nổi Bật
 
@@ -114,20 +101,6 @@ Hoặc sử dụng Live Server extension trong VS Code để có trải nghiệm
 - Trình duyệt hiện đại (Chrome, Firefox, Safari, Edge)
 - Kết nối Internet (để load Font Awesome icons)
 
-## 🔧 Tùy Chỉnh
-
-### Cập nhật thông tin cá nhân
-Chỉnh sửa trong `index.html`:
-- Thay đổi thông tin cá nhân
-- Cập nhật danh sách dự án
-- Thêm/Xóa kỹ năng
-
-### Tuỳ chỉnh style
-Chỉnh sửa `style.css` để:
-- Thay đổi màu sắc
-- Điều chỉnh layout
-- Cập nhật typography
-
 ### Thêm interactivity
 Cập nhật `script.js` để:
 - Thêm các tính năng mới
@@ -141,13 +114,6 @@ Hãy liên lạc với tôi qua:
 - 📧 **Email**: [lhd4388@gmail.com](mailto:lhd4388@gmail.com)
 - 📱 **Phone**: [0942.852.755](tel:0942852755)
 - 💼 **GitHub**: [@Fliz-none](https://github.com/Fliz-none)
-<!-- - 🌐 **Portfolio**: [lehaidang.dev](https://lehaidang.dev) -->
-
-## 📄 License
-
-Dự án này được cấp phép dưới MIT License - xem file [LICENSE](LICENSE) để biết thêm chi tiết.
-
----
 
 **Cảm ơn bạn đã ghé thăm portfolio của tôi!** 🙏
 
