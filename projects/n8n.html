@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="N8N Automation Workflow - Hệ thống tự động đăng bài lên multiple domains">
+    <title>N8N Automation Workflow - Lê Hải Đăng</title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%2300d4ff' width='100' height='100' rx='20'/%3E%3Ctext x='50' y='70' font-size='60' font-weight='900' fill='%230a0e27' text-anchor='middle' dominant-baseline='middle' font-family='monospace'%3E%26lt;/%26gt;%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css">
+</head>
+
+<body>
+    <!-- Navigation Back -->
+    <div class="section" style="padding-top: 40px; padding-bottom: 0;">
+        <a href="../index.html#projects" class="back-button">
+            <i class="fas fa-arrow-left"></i> Quay lại Projects
+        </a>
+    </div>
+
+    <!-- Project Header -->
+    <div class="section">
+        <div class="project-detail-header">
+            <div class="project-detail-title">
+                <i class="fas fa-robot"></i> N8N Automation Workflow
+            </div>
+            <p style="font-size: 18px; color: #cbd5e1; margin-bottom: 0;">
+                Hệ thống tự động đăng bài lên multiple domains với AI decision making
+            </p>
+            <div class="project-detail-img">
+                <img src="../images/n8n.jpg" alt="N8N Automation Workflow">
+            </div>
+            <div class="project-detail-meta">
+                <div class="meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>2025</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Content Distribution System</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Hoàn tất</span>
+                </div>
+            </div>
+            <div class="tech-tags">
+                <span class="tech-tag"><i class="fas fa-cogs"></i> n8n</span>
+                <span class="tech-tag"><i class="fas fa-brain"></i> AI Agent</span>
+                <span class="tech-tag"><i class="fas fa-plug"></i> API Integration</span>
+                <span class="tech-tag"><i class="fas fa-sheet"></i> Google Sheets</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overview -->
+    <div class="section">
+        <div class="workflow-section">
+            <h2 class="workflow-title">
+                <i class="fas fa-eye"></i> Tổng quan
+            </h2>
+            <div class="about-text" style="margin-top: 0;">
+                <p>
+                    Đây là một hệ thống automation workflow toàn diện, được xây dựng trên nền tảng <strong>n8n</strong>,
+                    giúp tự động hóa quy trình đăng bài lên nhiều website khác nhau. Hệ thống sử dụng
+                    <strong>AI Agent</strong> để phân tích nội dung bài viết và quyết định bài nên đăng lên những
+                    domain nào một cách thông minh.
+                </p>
+                <p>
+                    Workflow được thiết kế để xử lý hàng loạt bài viết, chuẩn hóa dữ liệu, phân loại tự động bằng AI,
+                    và thực hiện đăng bài song song lên các website đích. Tất cả hoạt động đều được ghi log vào
+                    <strong>Google Sheets</strong> để theo dõi và phân tích.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Workflow Steps -->
+    <div class="section">
+        <div class="workflow-section">
+            <h2 class="workflow-title">
+                <i class="fas fa-diagram-project"></i> Quy trình hoạt động
+            </h2>
+
+            <div class="workflow-container">
+                <!-- Step 1 -->
+                <div class="workflow-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <div class="step-label">
+                            <i class="fas fa-play-circle"></i> Trigger - Chạy workflow thủ công
+                        </div>
+                        <div class="step-description">
+                            Workflow bắt đầu bằng một trigger thủ công hoặc schedule, khởi tạo quy trình đăng bài.
+                        </div>
+                        <div class="step-highlight">
+                            💡 Có thể kích hoạt thủ công hoặc lên lịch chạy tự động hàng ngày
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workflow-arrow">
+                    <i class="fas fa-arrow-down-long"></i>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="workflow-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <div class="step-label">
+                            <i class="fas fa-list"></i> GetPostsIds - Lấy danh sách ID bài viết
+                        </div>
+                        <div class="step-description">
+                            Gọi API để lấy danh sách ID bài viết từ website gốc (ví dụ: CMS, blog hoặc database).
+                        </div>
+                        <div class="step-highlight">
+                            📌 API endpoint: GET /api/posts/ids?limit=50
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workflow-arrow">
+                    <i class="fas fa-arrow-down-long"></i>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="workflow-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <div class="step-label">
+                            <i class="fas fa-shuffle"></i> NormalizeIds - Chuẩn hóa dữ liệu
+                        </div>
+                        <div class="step-description">
+                            Chuyển danh sách ID thành dạng mảng từng item để có thể loop xử lý từng bài viết.
+                        </div>
+                        <div class="step-highlight">
+                            🔄 Input: [1, 2, 3, 4, 5] → Output: [{id: 1}, {id: 2}, {id: 3}, ...]
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workflow-arrow">
+                    <i class="fas fa-arrow-down-long"></i>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="workflow-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <div class="step-label">
+                            <i class="fas fa-loop"></i> Loop Over Items - Lặp từng bài viết
+                        </div>
+                        <div class="step-description">
+                            Lặp qua từng ID bài viết trong mảng để xử lý riêng biệt.
+                        </div>
+                        <div class="step-highlight">
+                            ⚡ Mỗi vòng lặp xử lý một bài viết với toàn bộ quy trình
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workflow-arrow">
+                    <i class="fas fa-arrow-down-long"></i>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="workflow-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <div class="step-label">
+                            <i class="fas fa-file-alt"></i> GetDetailPost - Lấy nội dung bài viết
+                        </div>
+                        <div class="step-description">
+                            Gọi API để lấy đầy đủ nội dung bài viết (tiêu đề, mô tả, nội dung, ảnh, v.v.) theo ID.
+                        </div>
+                        <div class="step-highlight">
+                            📄 API endpoint: GET /api/posts/{id}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workflow-arrow">
+                    <i class="fas fa-arrow-down-long"></i>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="workflow-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <div class="step-label">
+                            <i class="fas fa-brain"></i> DecideTargets - AI phân tích và quyết định
+                        </div>
+                        <div class="step-description">
+                            Sử dụng AI Agent (ChatGPT/Claude) để phân tích nội dung bài viết, xác định danh mục,
+                            từ khóa, v.v. và quyết định bài nên đăng lên những domain nào.
+                        </div>
+                        <div class="step-highlight">
+                            🤖 Prompt: "Phân tích bài viết này và quyết định nên đăng lên domain nào trong danh sách:
+                            [domain1, domain2, ...]"
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workflow-arrow">
+                    <i class="fas fa-arrow-down-long"></i>
+                </div>
+
+                <!-- Step 7 -->
+                <div class="workflow-step">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <div class="step-label">
+                            <i class="fas fa-code"></i> Normalize - Chuẩn hóa output từ AI
+                        </div>
+                        <div class="step-description">
+                            Sử dụng JavaScript để chuẩn hóa output từ AI thành cấu trúc JSON dễ xử lý, đảm bảo dữ
+                            liệu nhất quán.
+                        </div>
+                        <div class="step-highlight">
+                            📋 Output: { target_domains: ["domain1", "domain2"], post: {...} }
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workflow-arrow">
+                    <i class="fas fa-arrow-down-long"></i>
+                </div>
+
+                <!-- Step 8 -->
+                <div class="workflow-step">
+                    <div class="step-number">8</div>
+                    <div class="step-content">
+                        <div class="step-label">
+                            <i class="fas fa-sitemap"></i> PublishToSites - Lặp từng domain
+                        </div>
+                        <div class="step-description">
+                            Lặp qua từng domain trong target_domains để thực hiện đăng bài lên từng website.
+                        </div>
+                        <div class="step-highlight">
+                            🔁 Vòng lặp thứ 2 để xử lý publish song song
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workflow-arrow">
+                    <i class="fas fa-arrow-down-long"></i>
+                </div>
+
+                <!-- Step 9 -->
+                <div class="workflow-step">
+                    <div class="step-number">9</div>
+                    <div class="step-content">
+                        <div class="step-label">
+                            <i class="fas fa-upload"></i> Publish - Đăng bài lên website
+                        </div>
+                        <div class="step-description">
+                            Gọi API của từng website tương ứng để thực hiện đăng bài (create post).
+                        </div>
+                        <div class="step-highlight">
+                            🌐 API endpoint: POST /api/posts với nội dung bài viết
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workflow-arrow">
+                    <i class="fas fa-arrow-down-long"></i>
+                </div>
+
+                <!-- Step 10 -->
+                <div class="workflow-step">
+                    <div class="step-number">10</div>
+                    <div class="step-content">
+                        <div class="step-label">
+                            <i class="fas fa-sheet"></i> Log to Google Sheets - Ghi nhật ký
+                        </div>
+                        <div class="step-description">
+                            Ghi lại tất cả hoạt động vào Google Sheets: bài viết nào, đăng lên domain nào, kết quả
+                            (thành công/lỗi), thời gian, v.v.
+                        </div>
+                        <div class="step-highlight">
+                            📊 Tracking: Post ID, Domain, Status, Timestamp, Error (if any)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features -->
+    <div class="section">
+        <div class="workflow-section">
+            <h2 class="workflow-title">
+                <i class="fas fa-sparkles"></i> Tính năng chính
+            </h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="feature-title">AI Decision Making</div>
+                    <div class="feature-text">
+                        Sử dụng AI Agent để phân tích nội dung và tự động quyết định bài viết nên đăng lên domain nào.
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <div class="feature-title">Multi-API Integration</div>
+                    <div class="feature-text">
+                        Tích hợp với nhiều API khác nhau để lấy dữ liệu bài viết và đăng bài lên các website.
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-circle-notch"></i>
+                    </div>
+                    <div class="feature-title">Error Handling</div>
+                    <div class="feature-text">
+                        Xử lý lỗi thông minh với retry logic, thông báo lỗi chi tiết vào Google Sheets.
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sheet"></i>
+                    </div>
+                    <div class="feature-title">Logging & Tracking</div>
+                    <div class="feature-text">
+                        Ghi nhật ký đầy đủ vào Google Sheets để theo dõi tất cả hoạt động và phân tích hiệu năng.
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="feature-title">Schedule Support</div>
+                    <div class="feature-text">
+                        Hỗ trợ lên lịch chạy tự động hàng ngày/hàng giờ, không cần can thiệp thủ công.
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="feature-title">Data Normalization</div>
+                    <div class="feature-text">
+                        Chuẩn hóa dữ liệu đầu vào/đầu ra bằng JavaScript để đảm bảo tính nhất quán.
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                    <div class="feature-title">Scalable Architecture</div>
+                    <div class="feature-text">
+                        Kiến trúc có khả năng mở rộng, dễ dàng thêm domain mới hoặc thay đổi logic.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tech Stack -->
+    <div class="section">
+        <div class="tech-stack-section">
+            <h2 class="tech-stack-title">
+                <i class="fas fa-layer-group"></i> Công nghệ sử dụng
+            </h2>
+            <div class="tech-stack-grid">
+                <div class="tech-item">
+                    <div class="tech-item-icon">
+                        <img src="../images/n8n_logo.svg" alt="n8n" style="height: 28px; width: auto;">
+                    </div>
+                    <div class="tech-item-name">n8n</div>
+                    <div class="tech-item-desc">Workflow Automation Platform</div>
+                </div>
+
+                <div class="tech-item">
+                    <div class="tech-item-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="tech-item-name">AI Agent</div>
+                    <div class="tech-item-desc">ChatGPT / Claude API</div>
+                </div>
+
+                <div class="tech-item">
+                    <div class="tech-item-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="tech-item-name">JavaScript</div>
+                    <div class="tech-item-desc">Data Processing & Logic</div>
+                </div>
+
+                <div class="tech-item">
+                    <div class="tech-item-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <div class="tech-item-name">REST API</div>
+                    <div class="tech-item-desc">Multiple Integrations</div>
+                </div>
+
+                <div class="tech-item">
+                    <div class="tech-item-icon">
+                        <i class="fa-solid fa-table-cells-large"></i>
+                    </div>
+                    <div class="tech-item-name">Google Sheets</div>
+                    <div class="tech-item-desc">Logging & Analytics</div>
+                </div>
+            </div>
+
+            <div class="tech-info">
+                <div class="tech-item-desc" style="padding-top: 7px;">Dữ liệu khách hàng được bảo mật, sử dụng xác thực nhiều lớp tránh lỗ hỏng dữ liệu.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Benefits -->
+    <div class="section">
+        <div class="workflow-section">
+            <h2 class="workflow-title">
+                <i class="fas fa-trophy"></i> Lợi ích đạt được
+            </h2>
+            <div class="about-text" style="margin-top: 0;">
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 16px; display: flex; align-items: flex-start; gap: 12px;">
+                        <span style="color: #00d4ff; font-weight: 700; font-size: 18px;">✓</span>
+                        <span><strong style="color: #00d4ff;">Tiết kiệm thời gian:</strong> Tự động hóa toàn bộ
+                            quy trình đăng bài, từ lấy dữ liệu, phân loại, đến đăng bài lên nhiều website.</span>
+                    </li>
+                    <li style="margin-bottom: 16px; display: flex; align-items: flex-start; gap: 12px;">
+                        <span style="color: #00d4ff; font-weight: 700; font-size: 18px;">✓</span>
+                        <span><strong style="color: #00d4ff;">Tăng hiệu suất:</strong> Xử lý hàng chục bài viết
+                            cùng lúc mà không cần can thiệp thủ công.</span>
+                    </li>
+                    <li style="margin-bottom: 16px; display: flex; align-items: flex-start; gap: 12px;">
+                        <span style="color: #00d4ff; font-weight: 700; font-size: 18px;">✓</span>
+                        <span><strong style="color: #00d4ff;">Giảm lỗi:</strong> AI phân tích và quyết định tự
+                            động, giảm tối đa sai sót do con người.</span>
+                    </li>
+                    <li style="margin-bottom: 16px; display: flex; align-items: flex-start; gap: 12px;">
+                        <span style="color: #00d4ff; font-weight: 700; font-size: 18px;">✓</span>
+                        <span><strong style="color: #00d4ff;">Theo dõi dễ dàng:</strong> Tất cả hoạt động được
+                            ghi nhật ký vào Google Sheets, dễ dàng theo dõi và phân tích.</span>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: 12px;">
+                        <span style="color: #00d4ff; font-weight: 700; font-size: 18px;">✓</span>
+                        <span><strong style="color: #00d4ff;">Mở rộng dễ dàng:</strong> Kiến trúc linh hoạt, dễ
+                            dàng thêm domain mới hoặc thay đổi logic mà không cần sửa code chính.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Footer -->
+    <div class="section" style="margin-bottom: 100px;">
+        <div class="about-text"
+            style="text-align: center; background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 153, 255, 0.05)); padding: 40px; border-radius: 12px; border: 1px solid rgba(0, 212, 255, 0.2); margin-top: 0;">
+            <p style="font-size: 18px; margin-bottom: 24px;">
+                Bạn muốn xây dựng một automation workflow tương tự? Hãy liên hệ với tôi để thảo luận!
+            </p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="../index.html#contact"
+                    style="padding: 14px 32px; background: linear-gradient(135deg, #00d4ff, #0099ff); color: #0a0e27; border-radius: 30px; text-decoration: none; font-weight: 700; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 8px 24px rgba(0, 212, 255, 0.35);">
+                    <i class="fas fa-envelope"></i> Liên hệ tôi
+                </a>
+                <a href="../index.html#projects"
+                    style="padding: 14px 32px; border: 2px solid #00d4ff; color: #00d4ff; background: transparent; border-radius: 30px; text-decoration: none; font-weight: 700; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 8px;">
+                    <i class="fas fa-arrow-left"></i> Xem dự án khác
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
